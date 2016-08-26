@@ -35,6 +35,7 @@ public class TestJPA {
     }
 
     public void run() {
+        //Testing JPA
         EntityManagerFactory factory = null;
         EntityManager em = null;
         try {
