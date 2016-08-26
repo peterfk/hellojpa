@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="sakila" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.mycompany.hellojpa.sakila.domain.Store</class>
+    <class>com.mycompany.hellojpa.sakila.domain.FilmActor</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Language</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Inventory</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Rental</class>
+    <class>com.mycompany.hellojpa.sakila.domain.City</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Film</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Payment</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Address</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Category</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Customer</class>
+    <class>com.mycompany.hellojpa.sakila.domain.FilmText</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Country</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Staff</class>
+    <class>com.mycompany.hellojpa.sakila.domain.FilmCategory</class>
+    <class>com.mycompany.hellojpa.sakila.domain.Actor</class>
+    <class>com.mycompany.hellojpa.FilmCategory</class>
+    <class>com.mycompany.hellojpa.CustomerList</class>
+    <class>com.mycompany.hellojpa.StaffList</class>
+    <class>com.mycompany.hellojpa.Film</class>
+    <class>com.mycompany.hellojpa.FilmList</class>
+    <class>com.mycompany.hellojpa.Address</class>
+    <class>com.mycompany.hellojpa.SalesByFilmCategory</class>
+    <class>com.mycompany.hellojpa.Inventory</class>
+    <class>com.mycompany.hellojpa.SalesByStore</class>
+    <class>com.mycompany.hellojpa.Category</class>
+    <class>com.mycompany.hellojpa.Store</class>
+    <class>com.mycompany.hellojpa.Staff</class>
+    <class>com.mycompany.hellojpa.Country</class>
+    <class>com.mycompany.hellojpa.ActorInfo</class>
+    <class>com.mycompany.hellojpa.FilmActor</class>
+    <class>com.mycompany.hellojpa.Rental</class>
+    <class>com.mycompany.hellojpa.Payment</class>
+    <class>com.mycompany.hellojpa.Language</class>
+    <class>com.mycompany.hellojpa.City</class>
+    <class>com.mycompany.hellojpa.NicerButSlowerFilmList</class>
+    <class>com.mycompany.hellojpa.Actor</class>
+    <class>com.mycompany.hellojpa.FilmText</class>
+    <class>com.mycompany.hellojpa.Customer</class>
+    <class>com.mycompany.hellojpa.sakila.domain.NicerButSlowerFilmList</class>
+    <class>com.mycompany.hellojpa.sakila.domain.FilmList</class>
+    <class>com.mycompany.hellojpa.sakila.domain.CustomerList</class>
+    <class>com.mycompany.hellojpa.sakila.domain.ActorInfo</class>
+    <class>com.mycompany.hellojpa.sakila.domain.SalesByStore</class>
+    <class>com.mycompany.hellojpa.sakila.domain.StaffList</class>
+    <class>com.mycompany.hellojpa.sakila.domain.SalesByFilmCategory</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sakila?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="test1234"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
