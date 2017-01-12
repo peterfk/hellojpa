@@ -56,7 +56,7 @@ public class TestJPA {
                 for (Rental r: c.getRentalSet()) {
                     LOG.log(Level.INFO, "Rental ID: {0} rental date {1}", new Object[]{r.getRentalId(), r.getRentalDate()});
                     ++i;
-                    LOG.info("Int i: " + i);
+//                    LOG.info("Int i: " + i);
                     if (i>4) break;
                 }
                 for (Payment p : c.getPaymentSet()) {
