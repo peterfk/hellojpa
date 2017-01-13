@@ -5,6 +5,7 @@
  */
 package com.mycompany.hellojpa;
 
+import com.mycompany.hellojpa.dto.CustomerMapper;
 import com.mycompany.hellojpa.sakila.domain.Customer;
 import com.mycompany.hellojpa.sakila.domain.Payment;
 import com.mycompany.hellojpa.sakila.domain.Rental;
@@ -45,7 +46,7 @@ public class TestJPA {
             //do queries
             String ql = "select c from Customer c "
                     + "join fetch c.rentalSet r "
-                    + "join fetch c.paymentSet p "
+//                    + "join fetch c.paymentSet p "
                     + "where c.lastName = :lastName";
             List<Customer> list = em.createQuery(ql).setParameter("lastName", "Vest")
                     .setMaxResults(10).getResultList();
@@ -59,11 +60,15 @@ public class TestJPA {
 //                    LOG.info("Int i: " + i);
                     if (i>4) break;
                 }
-                for (Payment p : c.getPaymentSet()) {
-                    LOG.info("Payment id: " + p.getPaymentId() + " Amount: " + p.getAmount());
-                }
+//                for (Payment p : c.getPaymentSet()) {
+//                    LOG.info("Payment id: " + p.getPaymentId() + " Amount: " + p.getAmount());
+//                }
+				
+				//MapStruct
+				Customer c2 = CustomerMapper.INSTANCE.customerMapper(c);
+				LOG.info("Customer name: " + c2.getFirstName());
             }
-
+			
         } catch (Exception e) {
             LOG.log(Level.SEVERE, e.getMessage(), e);
             e.printStackTrace();
